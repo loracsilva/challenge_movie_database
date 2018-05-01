@@ -1,0 +1,24 @@
+<div id="dropdown" class="dropdown"
+     ng-class="{'open':showDropdown}"
+     ng-click="disabled ? '' : toggleDropdown()">
+
+    <input ng-if="label" name="action-type" type="text"
+           ng-value="getLabel(selectedItem, label)"
+           ng-class="{'ng-invalid':!isValid()}"
+           ng-required="required" readonly
+           ng-disabled="disabled"
+           class="dropdown__field"
+           placeholder="{{placeholder}}" />
+
+    <span class="dropdown__icon">
+        <img src="/src/app/assets/img/flecha_derecha.svg" alt="">
+    </span>
+
+    <ul class="dropdown__list list-unstyled text-left">
+        <li class="dropdown__list-item"
+            ng-repeat="item in listItens"
+            ng-click="changeModel(item)">
+            {{getLabel(item, label)}}
+        </li>
+    </ul>
+</div>

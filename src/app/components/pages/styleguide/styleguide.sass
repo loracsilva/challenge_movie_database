@@ -1,0 +1,50 @@
+section
+  width: 100%
+  overflow: hidden
+  padding: 50px
+
+.genre
+  width: 500px
+  padding: 30px 20px
+
+.dropdown
+  width: 500px
+
+.col-lg-3 .col-md-3 .col-sm-3 .col-xs-6
+   align-items: stretch
+
+.card
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3)
+  border: none
+  margin-bottom: 30px
+ 
+.card:hover
+  transform: scale(1.05)
+  transition: all 1s ease
+  z-index: 999
+
+.card-text
+  display: none
+
+.card-img-top
+  width: 100%
+  height: 100%
+  min-height: 455px
+  +mq('ini') 
+    height: auto
+  +mq('sm')
+    height: auto
+
+.card .height-fix
+  height: 455px
+  overflow: hidden
+
+.card.height-fix .card-img-overlay
+  top: unset
+  color: #fff
+  background: linear-gradient(to bottom, rgba(26, 96, 111, 0) 0, rgba(26, 96, 111, 0) 1%, #1d2124 31%, rgba(0, 0, 0, .9) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666', endColorstr='#000', GradientType=0)
+
+.active-text
+  display: inline
+  transition: all 3s ease

@@ -1,0 +1,27 @@
+<section>
+    <div class="content">
+        <div class="row genre">
+            <genre-dropdown label="name" ng-change="clickfunction()" placeholder="Gênero" ng-model="dropdown"></genre-dropdown>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4" ng-repeat="movie in movies">
+                <div class="card card-01 height-fix" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                    <img class="card-img-top" src='http://image.tmdb.org/t/p/w500{{movie.poster_path}}' alt="{{movie.title}}">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">
+                            <strong>{{movie.title}}</strong>
+                        </h4>
+                        <p class="card-text" ng-class="{'active-text': hover}" >
+                                {{movie.overview | limitTo:400}}</p>
+                        <p class="card-text">
+                            <a href="#" class="fa fa-bookmark-o"></a>
+                            <a class="fa fa-heart-o" href="#"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,11 @@
+
+<div ng-class="form">
+  <span ng-show="icon" class="form__icon--input">
+    <img ng-src="{{icon}}" width="40px" alt="icone">
+  </span>
+  <input ng-if="mask" type="{{type}}" class="form-control" ng-class="{'form__input':!valid, 'form__input__is-valid':valid==true, 'form__input__is-invalid':valid==false, 'form__input__icon':icon}"
+    name="{{input}}" placeholder="{{placeholder}}" mask="{{mask}}" mask-input />
+  <input ng-if="!mask" type="{{type}}" class="form-control" ng-class="{'form__input':!valid, 'form__input__is-valid':valid==true, 'form__input__is-invalid':valid==false, 'form__input__icon':icon}"
+    name="{{input}}" placeholder="{{placeholder}}" />
+  <span class="form__transclude" ng-transclude></span>
+</div>

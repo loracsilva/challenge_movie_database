@@ -1,0 +1,49 @@
+.button
+  cursor: pointer
+  font-family: $primary-font
+  font-size: $m-font-size
+  font-weight: 600
+  text-align: center
+  border: none
+  outline: none
+  padding: 10px 55px
+
+  &:disabled
+    cursor: not-allowed
+    opacity: .5
+
+  &--primary
+    @extend .button
+    +linear-gradient(280deg, $primary-color, $secondary-color)
+    border-radius: $default-border-radius
+    color: $primary-button-text-color
+    transition: all $default-transition-timing
+
+    &:hover
+       opacity: .5
+       +svg-shadow(0, 10px, 10px, #ddd)
+
+    &:disabled
+      border-radius: $default-border-radius
+      background: $button-disabled-color
+      color: $button-disabled-text-color
+
+  &--boton-cierre
+    @extend .button
+    padding: 0
+    position: relative
+
+    &__icon
+      width: 55px
+    
+    &:hover
+       opacity: .5
+       +svg-shadow(0, 10px, 10px, #ddd)
+
+  &--chat
+    @extend .button
+    padding: 0
+
+    &__icon
+      +svg-shadow(0, 20px, 10px, #ddd)
+      width: 90px

@@ -1,0 +1,72 @@
+=linear-gradient($direction, $color-stops...)
+  background: nth($color-stops, 1)
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops)
+  background: linear-gradient($direction, $color-stops)
+
+=push--auto
+  margin:
+    left: auto
+    right: auto
+
+=pseudo($display: inline-block, $pos: relative, $content: '')
+  content: $content
+  display: $display
+  position: $pos
+
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+
+  @-moz-keyframes #{$animation-name}
+    @content
+
+  @-ms-keyframes #{$animation-name}
+    @content
+
+  @-o-keyframes #{$animation-name}
+    @content
+
+  @keyframes #{$animation-name}
+    @content
+
+=animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}
+
+=box-shadow($top: 0, $left: 3px, $blur: 5px, $color: #ddd, $inset: false)
+  @if $inset
+    -webkit-box-shadow: inset $top $left $blur $color
+    -moz-box-shadow: inset $top $left $blur $color
+    box-shadow: inset $top $left $blur $color
+  @else
+    -webkit-box-shadow: $top $left $blur $color
+    -moz-box-shadow: $top $left $blur $color
+    box-shadow: $top $left $blur $color
+
+=svg-shadow($top, $left, $blur, $color)
+  -webkit-filter: drop-shadow( $top $left $blur $color )
+  filter: drop-shadow( $top $left $blur $color )
+
+@mixin mq($width)
+  @if map_has_key($breakpoints, $width)
+    $width: map_get($breakpoints, $width)
+
+    @media only screen and (max-width: $width)
+      @content
+
+@mixin mqMin($width)
+  @if map_has_key($breakpoints, $width)
+    $width: map_get($breakpoints, $width)
+
+    @media only screen and (min-width: $width)
+      @content
+
+@function z($name)
+  @if index($z-indexes, $name) 
+    @return (length($z-indexes) - index($z-indexes, $name)) + 1
+  @else 
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}'
+    @return null
