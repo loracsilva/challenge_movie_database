@@ -22,9 +22,13 @@ Para instalação do ambiente de desenvolvimento será necessário executar os i
       ```
 
 * ### Inicializando a aplicação
-   Após instalar o *NodeJS* com sucesso, será necessário baixar os fontes do projeto *Vamos Latam*. Com os fontes baixados no diretório de sua preferencia execute os passos à seguir:
+   Após instalar o *NodeJS* com sucesso, será necessário baixar os fontes do projeto. 
 
+    ```javascript
+      git clone https://github.com/loracsilva/challenge_movie_database.git
+      ```
 
+   Com os fontes baixados no diretório local de sua preferencia execute os passos à seguir:
 
    1. Primeiramente precisamos instalar as dependencias desse projeto, para isso execute o comando abaixo:
 
@@ -42,10 +46,6 @@ Para instalação do ambiente de desenvolvimento será necessário executar os i
       ```
 
       Depois de alguns segundos uma janela será aberta no browser com o projeto rodando.
-
-
-    3. Deve-se alterar o valor do atributo href da tag <base> no index.html para ficar somente /. Essa alteração deve ser feita apenas localmente, não deve ser enviada para o server. Isso é necessário até que seja feita alguma modificação para o que o Browsersync consiga trabalhar com o contexto /vamos;
-
     
 # Estrutura de diretórios
 + **build:** Esse diretório irá conter o projeto gerado e pronto para ser rodado em qualquer servidor web.
