@@ -24,11 +24,13 @@ Para instalação do ambiente de desenvolvimento será necessário executar os i
 * ### Inicializando a aplicação
    Após instalar o *NodeJS* com sucesso, será necessário baixar os fontes do projeto. 
 
-    ```javascript
-      git clone https://github.com/loracsilva/challenge_movie_database.git
+      ```javascript
+       git clone https://github.com/loracsilva/challenge_movie_database.git
       ```
+      
 
    Com os fontes baixados no diretório local de sua preferencia execute os passos à seguir:
+
 
    1. Primeiramente precisamos instalar as dependencias desse projeto, para isso execute o comando abaixo:
 
@@ -46,6 +48,7 @@ Para instalação do ambiente de desenvolvimento será necessário executar os i
       ```
 
       Depois de alguns segundos uma janela será aberta no browser com o projeto rodando.
+
     
 # Estrutura de diretórios
 + **build:** Esse diretório irá conter o projeto gerado e pronto para ser rodado em qualquer servidor web.
